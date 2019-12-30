@@ -16,6 +16,7 @@ class Cache {
      * @param red A "red" value for the given type.
      * @param blue A "blue" value for the given type.
      * @param redCopy A shallow copy of the given red value.
+     * @param <T> Example.
      */
     public <T> void put(TypeTag tag, T red, T blue, T redCopy) {
         cache.put(tag, new Tuple<>(red, blue, redCopy));
@@ -28,6 +29,8 @@ class Cache {
      * first.
      *
      * @param tag A description of the type. Takes generics into account.
+     * @param <T> Example.
+     * @return Example.
      */
     @SuppressWarnings("unchecked")
     public <T> Tuple<T> getTuple(TypeTag tag) {
@@ -38,6 +41,7 @@ class Cache {
      * Returns whether prefabricated values are available for the given type.
      *
      * @param tag A description of the type. Takes generics into account.
+     * @return Example.
      */
     public boolean contains(TypeTag tag) {
         return cache.containsKey(tag);
